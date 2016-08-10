@@ -234,10 +234,6 @@ int main() {
 	int le, ri, k;
 	for (int i = 1; i <= q; i++) {
 		scanf("%d%d%d", &le, &ri, &k);
-		if (max_ri[k] > (int)roots.size()) {
-			puts("228");
-			return 0;
-		}
 		printf("%d\n", getSum(roots[max_ri[k]], 1, n, le, ri) - getSum(roots[max_le[k] - 1], 1, n, le, ri));
 	}
 	return 0;
